@@ -1,0 +1,66 @@
+INFO       2021-03-27 21:26:13,938 make_boto3_client                    25  : using default config.
+INFO       2021-03-27 21:26:13,956 load                                 1222: Found credentials in shared credentials file: ~/.aws/credentials
+INFO       2021-03-27 21:26:14,003 main                                 151 : Stack arguments: Namespace(cmd='c-vpc', stack_config_file='./config/vpc_config.json', cft_template_path='./config/CF1-VPC.json')
+INFO       2021-03-27 21:26:14,004 create_vpc                           47  : Creating VPC...
+INFO       2021-03-27 21:26:14,004 load_json                            41  : stack_config: {'StackName': 'sach-wordpress-vpc', 'Parameters': [{'ParameterKey': 'VpcCidrBlock', 'ParameterValue': '10.0.0.0/21', 'UsePreviousValue': False}, {'ParameterKey': 'SubnetCidrBlock', 'ParameterValue': '10.0.0.0/24', 'UsePreviousValue': False}], 'TimeoutInMinutes': 5, 'OnFailure': 'ROLLBACK', 'Tags': [{'Key': 'OwnerContact', 'Value': 'Sachin Garg'}], 'ClientRequestToken': 'VPCSTACK', 'OutputFilePath': './output/vpc_output.json', 'RetryCount': 3}
+INFO       2021-03-27 21:26:14,004 args_pre_processing                  125 : stack_config:{'StackName': 'sach-wordpress-vpc', 'Parameters': [{'ParameterKey': 'VpcCidrBlock', 'ParameterValue': '10.0.0.0/21', 'UsePreviousValue': False}, {'ParameterKey': 'SubnetCidrBlock', 'ParameterValue': '10.0.0.0/24', 'UsePreviousValue': False}], 'TimeoutInMinutes': 5, 'OnFailure': 'ROLLBACK', 'Tags': [{'Key': 'OwnerContact', 'Value': 'Sachin Garg'}], 'ClientRequestToken': 'VPCSTACK', 'OutputFilePath': './output/vpc_output.json', 'RetryCount': 3}
+INFO       2021-03-27 21:26:14,710 build_stack_obj                      58  : stackconfig:({'StackName': 'sach-wordpress-vpc', 'Parameters': [{'ParameterKey': 'VpcCidrBlock', 'ParameterValue': '10.0.0.0/21', 'UsePreviousValue': False}, {'ParameterKey': 'SubnetCidrBlock', 'ParameterValue': '10.0.0.0/24', 'UsePreviousValue': False}], 'TimeoutInMinutes': 5, 'OnFailure': 'ROLLBACK', 'Tags': [{'Key': 'OwnerContact', 'Value': 'Sachin Garg'}], 'ClientRequestToken': 'VPCSTACK', 'OutputFilePath': './output/vpc_output.json', 'RetryCount': 3},)
+INFO       2021-03-27 21:26:14,964 create_stack                         32  : Stack Created. response: {"StackId": "arn:aws:cloudformation:us-west-2:032562226605:stack/sach-wordpress-vpc/edc35d70-8f63-11eb-8348-0a8159024e31", "ResponseMetadata": {"RequestId": "d2ad96f4-89b2-4193-89eb-5a9370e4b6f8", "HTTPStatusCode": 200, "HTTPHeaders": {"x-amzn-requestid": "d2ad96f4-89b2-4193-89eb-5a9370e4b6f8", "content-type": "text/xml", "content-length": "388", "date": "Sun, 28 Mar 2021 01:26:14 GMT"}, "RetryAttempts": 0}}
+INFO       2021-03-27 21:26:15,079 create_stack                         54  : Create stack output response: {
+  "Stacks": [
+    {
+      "StackId": "arn:aws:cloudformation:us-west-2:032562226605:stack/sach-wordpress-vpc/edc35d70-8f63-11eb-8348-0a8159024e31",
+      "StackName": "sach-wordpress-vpc",
+      "Description": "AWS CloudFormation Template that builds a Sample VPC",
+      "Parameters": [
+        {
+          "ParameterKey": "VpcCidrBlock",
+          "ParameterValue": "10.0.0.0/21"
+        },
+        {
+          "ParameterKey": "SubnetCidrBlock",
+          "ParameterValue": "10.0.0.0/24"
+        }
+      ],
+      "CreationTime": "2021-03-28T01:21:32.049000+00:00",
+      "RollbackConfiguration": {},
+      "StackStatus": "CREATE_COMPLETE",
+      "DisableRollback": false,
+      "NotificationARNs": [],
+      "TimeoutInMinutes": 5,
+      "Outputs": [
+        {
+          "OutputKey": "VpcId",
+          "OutputValue": "vpc-09a5728587029c5e5",
+          "Description": "The created VPC ID"
+        },
+        {
+          "OutputKey": "SubnetId",
+          "OutputValue": "subnet-01e747cb2ba9172a7",
+          "Description": "The created Subnet ID"
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "OwnerContact",
+          "Value": "Sachin Garg"
+        }
+      ],
+      "EnableTerminationProtection": false,
+      "DriftInformation": {
+        "StackDriftStatus": "NOT_CHECKED"
+      }
+    }
+  ],
+  "ResponseMetadata": {
+    "RequestId": "afeb569e-5aa1-4e66-a54e-6f7b9396c898",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "x-amzn-requestid": "afeb569e-5aa1-4e66-a54e-6f7b9396c898",
+      "content-type": "text/xml",
+      "content-length": "1992",
+      "date": "Sun, 28 Mar 2021 01:26:14 GMT"
+    },
+    "RetryAttempts": 0
+  }
+}
