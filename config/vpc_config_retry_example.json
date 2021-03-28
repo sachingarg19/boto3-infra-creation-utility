@@ -1,0 +1,26 @@
+{
+  "StackName": "sach-wordpress-vpc",
+  "Parameters": [
+    {
+      "ParameterKey": "VpcCidrBlock",
+      "ParameterValue": "10.0.0.0",
+      "UsePreviousValue": false
+    },
+    {
+      "ParameterKey": "SubnetCidrBlock",
+      "ParameterValue": "10.0.0.0/24",
+      "UsePreviousValue": false
+    }
+  ],
+  "TimeoutInMinutes": 5,
+  "OnFailure": "ROLLBACK",
+  "Tags": [
+    {
+      "Key": "OwnerContact",
+      "Value": "Sachin Garg"
+    }
+  ],
+  "ClientRequestToken": "VPCSTACK",
+  "OutputFilePath": "./output/vpc_output.json",
+  "RetryCount": 3
+}

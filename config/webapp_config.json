@@ -1,0 +1,48 @@
+{
+  "StackName": "sach-wordpress",
+  "Parameters": [
+    {
+      "ParameterKey": "KeyName",
+      "ParameterValue": "sach-test-infra-key",
+      "UsePreviousValue": false
+    },
+    {
+      "ParameterKey": "InstanceType",
+      "ParameterValue": "t2.micro",
+      "UsePreviousValue": false
+    },
+    {
+      "ParameterKey": "AmiId",
+      "ParameterValue": "ami-e689729e",
+      "UsePreviousValue": false
+    },
+    {
+      "ParameterKey": "AllowedIp",
+      "ParameterValue": "0.0.0.0/0",
+      "UsePreviousValue": false
+    },
+    {
+      "ParameterKey": "DBUser",
+      "ParameterValue": "admin",
+      "UsePreviousValue": false
+    },
+    {
+      "ParameterKey": "DBPassword",
+      "ParameterValue": "q1w2e3r4",
+      "UsePreviousValue": false
+    }
+  ],
+  "TimeoutInMinutes": 5,
+  "OnFailure": "ROLLBACK",
+  "Tags": [
+    {
+      "Key": "OwnerContact",
+      "Value": "Sachin Garg"
+    }
+  ],
+  "ClientRequestToken": "WebAppSTACK",
+  "OutputFilePath": "./output/webapp_output.json",
+  "VPCStackName": "sach-wordpress-vpc",
+  "VPCOutputFilePath": "./output/vpc_output.json",
+  "RetryCount": 3
+}
