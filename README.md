@@ -69,7 +69,7 @@ and requires the following parameters:
 - SecurityGroupId - The ID of the resulting SecurityGroup
 
 
-### Features which are added as part of assignment
+### Features which are added as part of github repo
 1. Create High level flow diagram
 1. Create VPC based
   * Based on configurable & simplified json(config/vpc_config.json) file passed as a command line arguments
